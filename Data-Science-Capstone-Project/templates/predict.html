@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titanic Survival Prediction App</title>
+    <style>
+      /* Add some style to the body */
+      body {
+        background-image: url("Titanic_image.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+      }
+      /* Style the result box */
+      .result {
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Titanic Survival Prediction App</h1>
+    <div class="result">
+      {% if prediction == 1 %}
+        <h2>You Would Have Survived</h2>
+      {% else %}
+        <h2>You Would Not Have Survived</h2>
+      {% endif %}
+    </div>
+  </body>
+</html>

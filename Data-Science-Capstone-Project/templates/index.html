@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titanic Survival Prediction</title>
+	<style>
+		body {
+			background-size: cover;
+		}
+		.button {
+			background-color: #008CBA;
+			color: white;
+			font-size: 20px;
+			border-radius: 10px;
+			padding: 10px 20px;
+			text-align: center;
+			display: block;
+			margin: 50px auto;
+			width: 200px;
+			cursor: pointer;
+		}
+
+		.container {
+			background-color: transparent;
+			padding: 20px;
+			margin: 50px auto;
+			width: 80%;
+			text-align: justify;
+			background-size: cover;
+		}
+		h1, h2 {
+			text-align: center;
+			margin: 20px 0;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button id="story-button" class="button">Titanic Story</button>
+	</div>
+	<div id="story-container" class="container" style="display: none;">
+		<h1>The Titanic Story</h1>
+		<p>The Titanic was a British passenger liner that sank in the North Atlantic Ocean on April 15, 1912, after colliding with an iceberg during its maiden voyage from Southampton to New York City. The sinking of the Titanic resulted in the deaths of more than 1,500 passengers and crew, making it one of the deadliest commercial marine disasters in history.</p>
+		<h2>Background</h2>
+		<p>The Titanic was built by the Harland and Wolff shipyard in Belfast, Northern Ireland, and was one of three sister ships, along with the RMS Olympic and the HMHS Britannic. The Titanic was the largest ship afloat at the time of its maiden voyage and was considered to be unsinkable due to its advanced safety features, such as watertight compartments and an intricate system of pumps and valves.</p>
+		<h2>Sinking</h2>
+		<p>On the night of April 14, 1912, the Titanic struck an iceberg and began taking on water. Despite efforts to pump water out of the ship and slow its descent, the Titanic sank in the early hours of April 15, 1912. The sinking was due in part to a lack of lifeboats, which resulted in many passengers and crew members being unable to escape the sinking ship.</p>
+		<h2>Legacy</h2>
+		<p>The sinking of the Titanic had a profound impact on the world and led to significant changes in maritime safety regulations. The disaster also inspired numerous books, movies, and other works of art, and continues to capture the imagination of people around the world.</p>
+	</div>
+	<div class="container">
+		<form method="POST" action="/predict" style="text-align: center;">
+			<h1 style="color: black;">Titanic Survival Prediction</h1>
+
+
+			<label>Ticket Class:</label>
+			<select name="ticket_class" required>
+				<option value="1">1st</option>
+				<option value="2">2nd</option>
+				<option value="3">3rd</option>
+			</select><br><br>
+
+
+			<label>Gender:</label>
+			<select name="gender" required>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select><br><br>
+
+			<label>Embarked:</label>
+			<select name="Embarked" required>
+				<option value="1">S</option>
+				<option value="2">C</option>
+				<option value="3">Q</option>
+			</select><br><br>
+
+			<label>Title Name:</label>
+			<select name="Title_Name" required>
+				<option value="1">Mr</option>
+				<option value="2">Miss</option>
+				<option value="3">Mrs</option>
+				<option value="4">Other</option>
+			</select><br><br>
+
+			<label>Are you alone?:</label>
+			<select name="is_alone" required>
+				<option value="1">Yes</option>
+				<option value="2">No</option>
+			</select><br><br>
+
+
+			<label>Age:</label>
+			<input type="number" name="age" required><br><br>
+
+			<label>Fare:</label>
+			<input type="number" name="fare" step="0.01" required><br><br>
+
+
+			<button type="submit">Predict</button>
+		</form>
+
+
+    <script>
+		document.getElementById("story-button").addEventListener("click", function() {
+			var container = document.getElementById("story-container");
+			if (container.style.display === "none") {
+				container.style.display = "block";
+			} else {
+				container.style.display = "none";
+			}
+		});
+	</script>
+  </body>
+</html>

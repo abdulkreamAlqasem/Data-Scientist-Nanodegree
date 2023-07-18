@@ -33,7 +33,7 @@ I do it to be refrence for anyone want to learn who to build machine learning pr
 |- train.csv  # train data to train the model
 |- test.csv  # test data to test the model 
 
-- Titanic project .ipynb # notebook of the project
+- Titanic project (baseline) # notebook of the project
 
 - README.md
 ```
